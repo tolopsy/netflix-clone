@@ -1,5 +1,6 @@
 :root {
     --primary-color: #e50914;
+    --dark-color: #141414;
 }
 
 * {
@@ -37,9 +38,12 @@ img {
 }
 
 .container {
-    margin: 0 3.5rem;
+    max-width: 80%;
+    margin: auto;
+    padding: 0 1rem;
 }
 
+/* Header */
 .hero {
     width: 100%;
     height: 105vh;
@@ -98,6 +102,38 @@ img {
     margin-bottom: 1rem;
 }
 
+/* Tabs Section */
+.tabs {
+    background: var(--dark-color);
+    padding-top: 1rem;
+    border-bottom: 3px solid #3d3d3d;
+}
+.tabs .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.tabs .container > div {
+    padding: 1.5rem 0;
+}
+
+.tabs .container > div:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.tabs p {
+    font-size: 1.2rem;
+    padding-top: 0.5rem;
+}
+
+.tab-border {
+    border-bottom: var(--primary-color) 4px solid;
+}
 /* Button */
 .btn {
     display: inline-block;
