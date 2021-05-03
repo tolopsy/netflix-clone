@@ -20,7 +20,7 @@ ul {
 }
 
 h1, h2, h3, h4 {
-    color: fff;
+    color: #fff;
 }
 
 a {
@@ -42,9 +42,21 @@ img {
 
 .hero {
     width: 100%;
-    height: 100vh;
+    height: 105vh;
     position: relative;
     background: url(../images/background.jpg) no-repeat center center/cover;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+    box-shadow: inset 0px 90px 200px #000000, inset 0 -90px 150px #000000;
 }
 
 .hero-top {
@@ -53,6 +65,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 2;
 }
 
 .hero-top img {
@@ -61,6 +74,28 @@ img {
 
 .hero-message {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: translateY(50%);
+    z-index: 2;
+}
+
+.hero-message h1 {
+    font-weight: 700;
+    font-size: 3.125rem;
+    max-width: 640px;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.hero-message p {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
 }
 
 /* Button */
@@ -88,8 +123,8 @@ img {
 }
 
 .btn-xl {
-    font-size: 2rem;
-    padding: 1.2rem 2.1rem;
+    font-size: 1.5rem;
+    padding: 1.2rem 1.2rem;
     text-transform: uppercase;
 }
 
