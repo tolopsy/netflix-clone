@@ -55,7 +55,8 @@ img {
 }
 
 .text-center {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
     margin-bottom: 1rem;
 }
 
@@ -269,4 +270,74 @@ img {
 
 .footer-info li {
     line-height: 1.7rem;
+}
+
+/* Media Queries */
+@media(max-width: 800px) {
+    .hero {
+        height: 80vh;
+    }
+
+    .hero-message h1 {
+        font-size: 2.5rem;
+        line-height: 1;
+    }
+
+    .hero-message p {
+        font-size: 1.5rem;
+    }
+
+    .hide-sm {
+        display: none;
+    }
+
+    .footer-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .btn-xl {
+        font-size: 1.2rem;
+        padding: 1rem 1rem;
+    }
+
+    .btn-lg{
+        font-size: 0.8rem;
+        padding: 0.5rem 0.4rem;
+    }
+
+    .text-lg {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .text-md {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .text-center {
+        font-size: 1.2rem;
+    }
+}
+
+@media(max-width:700px) {
+    .hero::after {
+        box-shadow: inset 0px 50px 100px #000000, inset 0 -50px 100px #000000;
+    }
+    
+    #tab-content-1 .tab-inner-content-1 {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    #tab-content-2 .tab-content-2-top {
+        display: block;
+        text-align: center;
+    }
+
+    #tab-content-2 .tab-content-2-bottom {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
 }
